@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vendors/jquery.min.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body ng-app="HotelBooking">
+
+    <div class="container" ng-controller="MainController">
+        <div class="row">
+            <div class="col-xs-8">
+                <h4><span><i class="fas fa-users pull-left logo"></i></span>Choose number of people</h4>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <i class="fas fa-bed pull-left logo"></i>  
+                        ROOMS
+                        <i class="add fas fa-plus-circle pull-right" ng-click="manageHotel.addRoom(manageHotel.rooms)"></i>
+                        <p class="pull-right textpad " ng-cloak>{{manageHotel.rooms}}</p>
+                        <i class="remove fas fa-minus-circle pull-right" ng-click="manageHotel.removeRoom(manageHotel.rooms)"></i>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <i class="fas fa-user pull-left logo"></i> 
+                        ADULTS
+                        <i class="add fas fa-plus-circle pull-right" ng-click="manageHotel.addAdult(manageHotel.adults)"></i>
+                        <p class="pull-right textpad" ng-cloak>{{manageHotel.adults}}</p>
+                        <i class="remove fas fa-minus-circle pull-right" ng-click="manageHotel.removeAdult(manageHotel.adults)"></i>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <i class="fas fa-child pull-left logo"></i> 
+                        CHILDREN
+                        <i class="add fas fa-plus-circle pull-right" ng-click="manageHotel.addChild(manageHotel.children)"></i>
+                        <p class="pull-right textpad" ng-cloak>{{manageHotel.children}}</p>
+                        <i class="remove fas fa-minus-circle pull-right" ng-click="manageHotel.removeChild(manageHotel.children)"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="main.controller.js"></script>
+</body>
+</html>
